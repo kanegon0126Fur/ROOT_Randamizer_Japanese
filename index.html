@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ROOT派閥ランダマイザー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ROOT派閥ランダマイザー</h1>
+        <div class="inputs">
+            <label for="playerCount">プレイヤー数:</label>
+            <select id="playerCount">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            
+            <div class="expansions">
+                <label><input type="checkbox" name="expansion" value="さざめく河のけだもの軍記">さざめく河のけだもの軍記</label>
+                <label><input type="checkbox" name="expansion" value="そびえる山のいきもの乱記">そびえる山のいきもの乱記</label>
+                <label><input type="checkbox" name="expansion" value="みはてぬ宝のあらもの騒記">みはてぬ宝のあらもの騒記</label>
+            </div>
+            <label><input type="checkbox" id="complexityAdjustment" name="complexityAdjustment">複雑さを調整</label>
+                <div id="complexityOptions" style="display: none;">
+                    <p>✅を入れると、そのプレイヤーは選んだ「複雑さ」から派閥をランダマイズします。複数選択することも可能です。<br>
+                    すべてのプレイヤーに特定の「複雑さ」を設定すると、組み合わせが見つからなくてエラーが発生しやすいです。<br>
+                    慣れているプレイヤーは「複数の『複雑さ』を✅」「『全ての複雑さ』を✅」！</p>
+                    <div id="playerComplexityChoices"></div>
+                </div>
+                
+            <div class="checkbox-column">
+                <label><input type="checkbox" id="addMekaNeko" name="addMekaNeko">メカ野侯国を追加</label>
+            </div>
+            <div class="checkbox-column">
+                <label><input type="checkbox" id="addMercenaries" name="addMercenaries">傭兵隊を追加</label>
+            </div>
+        </div>
+        <button id="randomize">ランダマイザー！</button>
+        <div id="results"></div>
+        <div id="notice">
+            ※傭兵隊を選んだ状態でランダマイズすると、処理の関係で、実際は可能な組み合わせがあるのに「条件を満たす派閥の組み合わせが見つかりませんでした。」と表示されることがあります。この場合、何回かランダマイズを繰り返すと出てきます。
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

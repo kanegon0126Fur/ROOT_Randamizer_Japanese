@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.inputs, .expansions, #results {
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.checkbox-column {
+    margin-top: 10px;
+}
+
+#notice, #complexityOptions p {
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; /* #complexityOptions pに追加 */
+    text-align: left;
+}
+
+#results {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#results div {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* レスポンシブデザインのためのメディアクエリ */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    button, input[type="checkbox"] + label {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #notice, #complexityOptions p {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    button, input[type="checkbox"] + label {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #results div {
+        padding: 8px;
+    }
+}
